@@ -291,4 +291,48 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
 
     <img src="media/2017-04-07_14-51-52.png" width="640"/>
 
-    >**Talking Point**: With Visual Studio Mobile Center, we give you the ability to create your full DevOps pipeline in just a few simple clicks.  And everything that you need for your mobile app is in one easy to access place with some beautiful consolidated dashboards.  Let's go check out Mobile Center!
+    >**Talking Point**: Visual Studio Mobile Center is a mobile centric lens that sits on top of Visual Studio Team Systems.  With Visual Studio Mobile Center, we give you the ability to create your full DevOps pipeline in just a few simple clicks, and everything you need for your mobile app is in one easy to access place with some beautiful consolidated dashboards.  Let's go check out Mobile Center!
+
+29. Go back to your browser, tab 7
+
+    <img src="media/2017-04-07_15-11-28.png" width="640"/>
+
+    >**Talking Point**: Here is the landing page to Mobile Center where you can see all the mobile apps that I'm working with.  To show you how easy it is to set up a mobile project from nothing, let's go ahead and create a new app.
+
+30. Click on Add new > Add new app, enter Aquaint for app name, toggle through the iOS and Android options to show how mobile center will build any app any platform
+
+    <img src="media/2017-04-07_15-13-56.png" width="640"/>
+
+    >**Talking Point**:  Let's give our new app a name, and notice how we can create an iOS app or an Android app.  And if we chose an iOS app, the languages we support are object-C/Swift, React Native and Xamarin.  Same for Android, we support apps written in java, React Native or Xamarin.  Let me say this again, we support any language, any platform.  This isn't your daddy's Microsoft.  We love all languages and platforms and want to give all developers an amazing experience.  Mobile center totally works even if you write for iOS in Swift!  Any language, any platform.  Ok, because I work for Microsoft, I'm going to select an iOS app written in Xamarin.
+
+31. Click on iOS, Xamarin and Add new App
+
+    <img src="media/2017-04-07_15-18-21.png" width="640"/>
+
+    >**Talking Point**: Add just like that, we have created our app in Mobile Center.
+
+32. Show the first page that is created
+
+    <img src="media/2017-04-07_15-19-35.png" width="640"/>
+
+    >**Talking Point**: The first page gives you some instructions on how to enable your app for Mobile Center.  Basically, you just need to add a couple of lines of code to enable data crash reports and analytics
+
+33. Click on the build beacon
+
+    <img src="media/2017-04-07_15-22-38.png" width="640"/>
+
+    >**Talking Point**: The first thing we need to do is tell Mobile Center where our code is sitting.  As you can see, we can pull your code in from VSTS, GitHub or Bitbucket.  For this demo, my code is actually sitting in GitHub
+
+34. Click on GitHub
+
+    <img src="media/2017-04-07_15-24-48.png" width="640"/>
+
+    >**Talking Point**: I've already configured mobile center to connect with my instace of github, so immediately, you can see all my repos.  Let's go ahead and select the acquaint repo
+
+35. Click on acquaint repo
+
+    <img src="media/2017-04-07_15-26-14.png" width="640"/>
+
+    >**Talking Point**: And now Mobile Center is sucking down our code and now we can see all of my branches in the repo.   
+
+36. 
