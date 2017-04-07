@@ -115,7 +115,7 @@ You also need to clone the acquaint mobile xamarin app into your GitHub account
 
     <img src="media/2017-04-04_14-22-02.png" width="640"/>  
 
-    >**Talking Point**: For us, DevOps is the union of People, Process and our Products to enable continous delivery of value too our end users.  Now I said this very carefully.  Notice, I didn't say continuous delivery of code right?  Because continuously delivering code just gives us a piles of code.  That doesn't give any value to the end users.  Notice I didn't even say, continously deliver features.  Because once again, we need to make sure the features we deliver sprint after sprint are valuable to our end users.  To do this successfully, to continuously deliver value to your end users, this is extremely dificult.  And to be successful, you have to address all three pillars.  People (or culture), Process, and your Products and tools.
+    >**Talking Point**: For us, DevOps is the union of People, Process and our Products to enable continous delivery of value too our end users.  Now I said this very carefully.  Notice, I didn't say continuous delivery of code right?  Because continuously delivering code just gives us piles of code.  That doesn't give any value to the end users.  Notice I didn't even say, continously deliver features.  Because once again, we need to make sure the features we deliver sprint after sprint are valuable to our end users.  To do this successfully, to continuously deliver value to your end users, this is extremely dificult.  And to be successful, you have to address all three pillars.  People (or culture), Process, and your Products and tools.
 
 5.  Next slide
 
@@ -156,10 +156,137 @@ You also need to clone the acquaint mobile xamarin app into your GitHub account
 
     >**Talking Point**: We also need to gather analytics and telemtry.  Is my app up or down, is my app performing well, and what are users doing in my app?  HockeyApp can give us this information as well.
 
-11.  Next slide
+11. Next slide
+     
+    <img src="media/2017-04-07_11-23-21.png" width="640" />
 
-    <img src="media/2017-04-07_11-23-21.png" width="640"/>
+    >**Talking Point**: Not only can Hockey App give us analytics, HockeyApp also gives us Crash Reporting.  Instead of begging people to email you their crash reports, crash reports are automatically logged and displayed in Hockey App.
 
-    >**Talking Point**: Hockey App also gives us Crash Reporting.  Instead of begging people to email you their crash reports, crash reports are automatically logged and displayed in Hockey App.
+12. Next slide
 
-12
+    <img src="media/2017-04-07_12-22-11.png" width="640"/>
+
+    >**Talking Point**: So at Microsoft, we have products and services that can give you that full end to end DevOps experience.  Visual Studio Team Services for Work Item Tracking and Source Code Repository.  VSTS also has a fully customizable build system that can build your mobile apps in any language, for any platform.  Xamarin Test Cloud is a cloud service that hosts over 2500 real devices that can run your automated UI tests.  Release Management in VSTS with HockeyApp can be used to orchestrate your releases to all the different environments and testing groups.  HockeyApp can also be used to gather telemetry and crash analytics, which can feed back into the work item tracking in VSTS.  And then, we just rinse and repeat. Iteration after iteration.  Continually delivering value to our mobile end users.
+
+13. Open up your browser, your browser should be preloaded with 7 tabs. Make sure the first tab is displayed
+
+    Tab 1: XTC-BikeRiding-iOS build definition   
+    https://cadddemos.visualstudio.com/BikeSharing360/Mobile/_apps/hub/ms.vss-ciworkflow.build-ci-hub?_a=edit-build-definition&id=39
+
+    Tab 2: Build summary for 1.2.42  
+    https://cadddemos.visualstudio.com/BikeSharing360/_build/index?buildId=1128&_a=summary
+
+    Tab 3: Xamarin Test Cloud for BikeRider iOS
+    https://testcloud.xamarin.com/test/bikesharing_ef3eb325-c650-4182-b56e-d8473aee1223/
+
+    Tab 4: Xamarin Test Cloud for Bike Rider Android
+    https://testcloud.xamarin.com/app/7d43c6a5-2965-4136-8a74-c76c86d5d0ac/
+
+    Tab 5: Release definition for Bike Rider app  
+    https://cadddemos.visualstudio.com/BikeSharing360/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?definitionId=24&_a=environments-editor
+
+    Tab 6: Hockey App  
+    https://rink.hockeyapp.net/manage/apps/290323
+
+    Tab 7: Mobile Center  
+    https://mobile.azure.com/apps
+
+    <img src="media/2017-04-07_13-58-42.png" width="640"/>
+
+    >**Talking Point**: Let's take a look and see what this DevOps pipeline looks like.  First, we start with the build system in VSTS.  The build system in VSTS is a full customizable, fully configurable build system where you can make it do whatever you want.  It's basically a glorified task runner, where it runs one task, after another, after another.  
+
+14. Click on Add Task
+
+    <img src="media/2017-04-07_14-02-13.png" width="640"/>
+
+    >**Talking Point**: Out of the box, we have pre-built tasks for you that do all sorts of stuff including building andriod apps, building iOS apps in whatever language you want.  This build system can build anything.  Any language, any platform.  If there are things you want to do that isn't included with the out of the box tasks, got to the marketplace where the community has uploaded their custom build and release tasks.  If you still can't find what you want to do, you can write your own custom build and release tasks.  Tasks are nothing more than powershell scripts or node.js scripts, so what that means is if you can do something through the command line, you absolutely can create a custom task and make vsts do whatever you want.  As you can see, for this particular build, we are dynamically injecting values into the build, then building an iOS app, and then we are sending the build to Xamarin Test Cloud where we will run all of our automated UI tests against a bunch of apple devices.
+
+15. Click on Tab 2
+
+    <img src="media/2017-04-07_14-06-57.png" width="640"/>
+
+    >**Talking Point**: The build takes a while to run, so let's look at a build that's already been run.  Here is the build report.  As you can see, our build was successful, we can see all work items associated to this build as well as who made what changes to the code and why.  We also see we sent our app to Xamarin test cloud where all 20 tests that we ran passed on all the devices that we are testing against.  Of course, we can download all log files, download all build artifacts and see code coverage as well as see what environments this build has been deployed to.
+
+16. Click on Tab 3
+
+    <img src="media/2017-04-07_14-19-09.png" width="640"/>
+
+    >**Talking Point**: To see our automated UI tests, we can click on the link and here, we can see the number of tests that have been run, the App size and Peak memory.  We can also see all of  our test runs.  Looks like all of our tests are passing, which is boring, so let's go and check out our tests when we run against android
+
+17. Click on Tab 4
+
+    <img src="media/2017-04-07_14-22-20.png" width="640"/>
+
+    >**Talking Point**: Here we can see we have some failed test runs.  If we click on them
+
+18. Click on a failed test run row
+
+    <img src="media/2017-04-07_14-23-45.png" width="640"/>
+
+    >**Talking Point**: We can see all the android version's we are testing against as well as the manufacturers of the devices.  
+
+19. Click on App Launches
+
+    <img src="media/2017-04-07_14-25-30.png" width="640"/>
+    
+    >**Talking Point**: We can drill into the individual tests where we can see each test steps, images of each of the devices we are testing against and we can see which devices have failed.  Clicking on the individual device
+
+20. Click on a broken device, the click on Device Log and Test Failures
+
+    <img src="media/2017-04-07_14-26-57.png" width="640"/>
+
+    >**Talking Point**: will give detailed information on the device, where we can get Device log and also specific test failure information
+
+21. Click on Tab 5
+
+    <img src="media/2017-04-07_14-30-31.png" width="640"/>
+    
+    >**Talking Point**: When it comes time to deploy our app, we us Release Management inside of VSTS.  Here we get to define our environments, and also how we want to deploy our apps into the environment.  I use a pre-built HockeyApp task to deploy my app to my beta testers using HockeyApp.  
+
+22. Click on Store environment
+
+    <img src="media/2017-04-07_14-30-31.png" width="640"/>
+
+    >**Talking Point**: We can even use Release Management to deploy our app all the way to the App Store
+
+23. Click on Tab 6
+
+    <img src="media/2017-04-07_14-38-19.png" width="640"/>
+
+    >**Talking Point**: Using HockeyApp, we can also gather telemetry and crash reports.  We can see what version has been deployed to who.  We can see the number of crashes, downloads, users, sessions.  Crashes Per day.
+
+24. Click on Crashes
+
+    <img src="media/2017-04-07_14-40-03.png" width="640"/>
+
+    >**Talking Point**: We can also see all the different crashes.
+
+24. Double click on the first crash in the list
+
+    <img src="media/2017-04-07_14-41-26.png" width="640"/>
+
+    >**Talking Point**: Including detailed information on individual crashes including Crashes per day, Impacted users per day, Top affected OS's, top affected devices and most important, the crash stack trace!
+
+25.  Go back to the slide deck
+
+    <img src="media/2017-04-07_14-45-59.png" width="640"/>
+
+    >**Talking Point**: So there you go.  Full end to end DevOps coverage from build, to testing, to distribution, to Analytics and Crash reporting.  All in an automated pipeline.  However, this is still a bit cumbersome to use and set up.  Setting up those builds, automated ui test runs and release pipelines is not trivial.  And to really see what's going on with our mobile app, we now need to go to three seperate services. VSTS, Xamarin Test Cloud, and HockeyApp.
+
+26. Next slide
+
+    <img src="media/2017-04-07_14-49-06.png" width="640"/>
+
+    >**Talking Point**: Wouldn't it be great if I could just configure all of this with just a couple of clicks?  And wouldn't it be great if I can see everything in one place?
+
+27. Next slide
+
+    <img src="media/2017-04-07_14-50-42.png" width="640"/>
+
+    >**Talking Point**: And now, you can with Visual Studio Mobile Center
+
+28. Next slide
+
+    <img src="media/2017-04-07_14-51-52.png" width="640"/>
+
+    >**Talking Point**: With Visual Studio Mobile Center, we give you the ability to create your full DevOps pipeline in just a few simple clicks.  And everything that you need for your mobile app is in one easy to access place with some beautiful consolidated dashboards.  Let's go check out Mobile Center!
