@@ -60,11 +60,13 @@ your mobile app in one easy to consume place
 ## Demo Setup
 For this demo, you need access to the cadddemos instance of VSTS.  Specifically, the XTC-BikeRiding-iOS build and the Auto-depoy to HockeyApp release.
 
-You will also need an account in VS Mobile Center with access to the BikeRider - Prod
-for iOS app as one of your apps in Mobile Center.  I contacted Simina on the Mobile Center team and
+You will also need access to Xamarin Test Cloud and Hockey App
+
+VS Mobile Center with access to the BikeRider - Prod
+for iOS app as one of your apps in Mobile Center is required as well.  I contacted Simina on the Mobile Center team and
 she gave me access to the project.
 
-You also need to clone the acquaint mobile xamarin app into your GitHub account
+Finally, you will need to clone the acquaint mobile xamarin app into your GitHub account
 
 1.  Browse to your github account and click New repository
 
