@@ -263,76 +263,120 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
 
     >**Talking Point**: We can also see all the different crashes.
 
-24. Double click on the first crash in the list
+25. Double click on the first crash in the list
 
     <img src="media/2017-04-07_14-41-26.png" width="640"/>
 
     >**Talking Point**: Including detailed information on individual crashes including Crashes per day, Impacted users per day, Top affected OS's, top affected devices and most important, the crash stack trace!
 
-25.  Go back to the slide deck
+26. Go back to the slide deck
 
     <img src="media/2017-04-07_14-45-59.png" width="640"/>
 
-    >**Talking Point**: So there you go.  Full end to end DevOps coverage from build, to testing, to distribution, to Analytics and Crash reporting.  All in an automated pipeline.  However, this is still a bit cumbersome to use and set up.  Setting up those builds, automated ui test runs and release pipelines is not trivial.  And to really see what's going on with our mobile app, we now need to go to three seperate services. VSTS, Xamarin Test Cloud, and HockeyApp.
+    >**Talking Point**: So there you go.  Full end to end DevOps coverage from build, to testing, to distribution, to Analytics and Crash reporting.  Continuous Integration, Continuous Testing, Continuous Delivery, and Continuous Learning.  All in an automated pipeline.  However, this is still a bit cumbersome to use and set up.  Setting up those builds, automated ui test runs and release pipelines is not trivial.  And to really see what's going on with our mobile app, we now need to go to three seperate services. VSTS, Xamarin Test Cloud, and HockeyApp.
 
-26. Next slide
+27. Next slide
 
     <img src="media/2017-04-07_14-49-06.png" width="640"/>
 
     >**Talking Point**: Wouldn't it be great if I could just configure all of this with just a couple of clicks?  And wouldn't it be great if I can see everything in one place?
 
-27. Next slide
+28. Next slide
 
     <img src="media/2017-04-07_14-50-42.png" width="640"/>
 
     >**Talking Point**: And now, you can with Visual Studio Mobile Center
 
-28. Next slide
+29. Next slide
 
     <img src="media/2017-04-07_14-51-52.png" width="640"/>
 
     >**Talking Point**: Visual Studio Mobile Center is a mobile centric lens that sits on top of Visual Studio Team Systems.  With Visual Studio Mobile Center, we give you the ability to create your full DevOps pipeline in just a few simple clicks, and everything you need for your mobile app is in one easy to access place with some beautiful consolidated dashboards.  Let's go check out Mobile Center!
 
-29. Go back to your browser, tab 7
+30. Go back to your browser, tab 7
 
     <img src="media/2017-04-07_15-11-28.png" width="640"/>
 
     >**Talking Point**: Here is the landing page to Mobile Center where you can see all the mobile apps that I'm working with.  To show you how easy it is to set up a mobile project from nothing, let's go ahead and create a new app.
 
-30. Click on Add new > Add new app, enter Aquaint for app name, toggle through the iOS and Android options to show how mobile center will build any app any platform
+31. Click on Add new > Add new app, enter Aquaint for app name, toggle through the iOS and Android options to show how mobile center will build any app any platform
 
     <img src="media/2017-04-07_15-13-56.png" width="640"/>
 
     >**Talking Point**:  Let's give our new app a name, and notice how we can create an iOS app or an Android app.  And if we chose an iOS app, the languages we support are object-C/Swift, React Native and Xamarin.  Same for Android, we support apps written in java, React Native or Xamarin.  Let me say this again, we support any language, any platform.  This isn't your daddy's Microsoft.  We love all languages and platforms and want to give all developers an amazing experience.  Mobile center totally works even if you write for iOS in Swift!  Any language, any platform.  Ok, because I work for Microsoft, I'm going to select an iOS app written in Xamarin.
 
-31. Click on iOS, Xamarin and Add new App
+32. Click on iOS, Xamarin and Add new App
 
     <img src="media/2017-04-07_15-18-21.png" width="640"/>
 
     >**Talking Point**: Add just like that, we have created our app in Mobile Center.
 
-32. Show the first page that is created
+33. Show the first page that is created
 
     <img src="media/2017-04-07_15-19-35.png" width="640"/>
 
     >**Talking Point**: The first page gives you some instructions on how to enable your app for Mobile Center.  Basically, you just need to add a couple of lines of code to enable data crash reports and analytics
 
-33. Click on the build beacon
+34. Click on the build beacon
 
     <img src="media/2017-04-07_15-22-38.png" width="640"/>
 
     >**Talking Point**: The first thing we need to do is tell Mobile Center where our code is sitting.  As you can see, we can pull your code in from VSTS, GitHub or Bitbucket.  For this demo, my code is actually sitting in GitHub
 
-34. Click on GitHub
+35. Click on GitHub
 
     <img src="media/2017-04-07_15-24-48.png" width="640"/>
 
     >**Talking Point**: I've already configured mobile center to connect with my instace of github, so immediately, you can see all my repos.  Let's go ahead and select the acquaint repo
 
-35. Click on acquaint repo
+36. Click on acquaint repo
 
     <img src="media/2017-04-07_15-26-14.png" width="640"/>
 
-    >**Talking Point**: And now Mobile Center is sucking down our code and now we can see all of my branches in the repo.   
+    >**Talking Point**: And now Mobile Center is sucking down our code and we can see all of my branches in the repo.  We can create a build for any one of these branches, let's go and create a build for the master branch   
 
-36. 
+37. Click on the master branch
+
+    <img src="media/2017-04-09_14-26-44.jpg" width="640"/>
+
+38. Click on Set up branch, then toggle build on push, build for simulator, toggle run a launch test and toggle distribute builds. End it with BUild on Push, Build for simulator, and click Finish setup
+
+    <img src="media/2017-04-09_14-26-45.jpg" width="640"/>
+
+    >**Talking Point**: From here, we can turn this build into a Continuous Integration build by toggling this switch.  If it's enabled, every checkin will kick off this build.  We can also choose to make this a build for simulators, or a real build.  If we chose a real build, we have to upload certificates
+
+39. Click on the build after talking
+
+    <img src="media/2017-04-09_14-47-22.jpg" width="640"/>
+
+    >**Talking Point**: And just like that, we have created a for our app
+
+40. After the build loads
+
+    <img src="media/2017-04-09_14-50-38.jpg" width="640"/>
+
+    >**Talking Point**: We have also kicked off our first build.  And this is a real build of our iOS app.  Now I can hear some of you asking a question already.  Aren't you required to have a mac to do a build for iOS?  And the answer is yes! But you don't actually need one.  We will spin up a Mac for you in the cloud that is already pre-configured with everything you need to build your iOS app!!! Just a couple of clicks and bam, we have created our mobile build.  How cool is that???
+
+41. Click on the test beacon
+
+    <img src="media/2017-04-09_17-15-52.jpg" width="640"/>
+
+    >**Talking Point**: Setting up your automated tests is super easy too.  Let's just click on the test beacon, click on Start testing your app...
+
+42. Select a couple of devices 
+
+    <img src="media/2017-04-09_18-21-55.jpg" width="640"/>
+
+    >**Talking Point**: Now, we just select the devices we want to test against
+
+43. Click Select devices button
+
+    <img src="media/2017-04-09_18-30-52.jpg" width="640"/>
+
+    >**Talking Point**: Next we can select what kind of test we are running.  Currently we support Appim, Calabash and of course Xamarin.UITest
+
+44. Browse back out to the BikeRider - Prod app
+
+    <img src="media/2017-04-09_18-54-07.jpg" width="640"/>
+
+    >**Talking Point**: It takes a while for the build to actually complete and for the tests to fire off so we'll take a look at a run that I've already done
