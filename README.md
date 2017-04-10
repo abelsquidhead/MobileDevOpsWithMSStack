@@ -28,21 +28,20 @@ challenges.
 5.  Need to collect telemetry from devices
 
 Visual Studio Mobile Center addresses all of these issues and with a couple of clicks, you can
-build out your entire DevOps pipeline.  Continuous Integration, Continuous Testing, Continous Deliver,
+build out your entire DevOps pipeline.  Continuous Integration, Continuous Testing, Continous Delivery,
 Continuous Learning.  You also have an integrated set of dashboards with everything you need for
 your mobile app in one easy to consume place
 
 
 ### Key Takeaways
 
-1.  Microsoft has products and services that give you that full DevOps coverage.  VSTS
+1.  Microsoft has products and services that give you that full mobile DevOps coverage.  VSTS
     for build and release orchestrations.  Xamarin Test Cloud for automated UI testing on over 
     2000 physical devices.  Hockey App for deployment to alpha/beta testers, crash analytics and 
     user telemetry.
 
-2.  This is spread across 3 serices requiring the user to go to three seperate product pages to see
-    what's going on with one mobile app.  Wouldn't it be great to have a single place to see all of this?  
-    And of course, we do.  Visual Studio Mobile Center.  Visual Studio Mobile Center is a mobile centric lens on top of Visual Studio Team Services.  Visual Studio Mobile Center is your mission control center for your mobile app.
+2.  This is spread across 3 services requiring the user to go to three seperate product pages to see
+    what's going on with one mobile app.  Wouldn't it be great to have a single place to see all of this? Actually, we do have this.  Visual Studio Mobile Center.  Visual Studio Mobile Center is a mobile centric lens on top of Visual Studio Team Services.  Visual Studio Mobile Center is your mission control center for your mobile app.
 
 2.  Visual Studio Mobile Center simplifies the enter DevOps pipeline for mobile 
     apps. With a couple of clicks, you can set up Continuous Integration,
@@ -117,7 +116,7 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
 
     <img src="media/2017-04-04_14-22-02.png" width="640"/>  
 
-    >**Talking Point**: For us, DevOps is the union of People, Process and our Products to enable continous delivery of value too our end users.  Now I said this very carefully.  Notice, I didn't say continuous delivery of code right?  Because continuously delivering code just gives us piles of code.  That doesn't give any value to the end users.  Notice I didn't even say, continously deliver features.  Because once again, we need to make sure the features we deliver sprint after sprint are valuable to our end users.  To do this successfully, to continuously deliver value to your end users, this is extremely dificult.  And to be successful, you have to address all three pillars.  People (or culture), Process, and your Products and tools.
+    >**Talking Point**: For us, DevOps is the union of People, Process and our Products to enable continous delivery of value too our end users.  Now I said this very carefully.  Notice, I didn't say continuous delivery of code right?  Because continuously delivering code just gives us piles of code.  That doesn't give any value to the end users.  Notice I didn't even say, continously deliver features.  Because features by themselves don't guarentee value.  We need to make sure the features we deliver sprint after sprint are valuable to our end users.  To do this successfully, to continuously deliver value to your end users, this is extremely dificult.  And to be successful, you have to address all three pillars.  People (or culture), Process, and your Products and tools.
 
 5.  Next slide
 
@@ -156,7 +155,7 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
 
     <img src="media/2017-04-07_11-20-33.png" width="640"/>
 
-    >**Talking Point**: We also need to gather analytics and telemtry.  Is my app up or down, is my app performing well, and what are users doing in my app?  HockeyApp can give us this information as well.
+    >**Talking Point**: We also need to gather analytics and telemtry.  Is my app up or down, is my app performing well, and what are users doing in my app?  HockeyApp can also give us this information.
 
 11. Next slide
      
@@ -207,7 +206,7 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
 
     <img src="media/2017-04-07_14-06-57.png" width="640"/>
 
-    >**Talking Point**: The build takes a while to run, so let's look at a build that's already been run.  Here is the build report.  As you can see, our build was successful, we can see all work items associated to this build as well as who made what changes to the code and why.  We also see we sent our app to Xamarin test cloud where all 20 tests that we ran passed on all the devices that we are testing against.  Of course, we can download all log files, download all build artifacts and see code coverage as well as see what environments this build has been deployed to.
+    >**Talking Point**: The build takes a while to run, so let's look at a build that's already been run.  Here is the build report. This was a successful build and in the report, we can see all work items associated to this build as well as who made what changes to the code and why.  We also see we sent our app to Xamarin test cloud where all 20 tests that we ran passed on all the devices that we are testing against.  Of course, we can download all log files, download all build artifacts and see code coverage as well as see what environments this build has been deployed to.
 
 16. Click on Tab 3
 
@@ -231,7 +230,7 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
 
     <img src="media/2017-04-07_14-25-30.png" width="640"/>
     
-    >**Talking Point**: We can drill into the individual tests where we can see each test steps, images of each of the devices we are testing against and we can see which devices have failed.  Clicking on the individual device
+    >**Talking Point**: We can drill into the individual tests where we can see each test step, images of each of the devices we are testing against and we can see which devices have failed.  Clicking on the individual device
 
 20. Click on a broken device, the click on Device Log and Test Failures
 
@@ -243,7 +242,7 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
 
     <img src="media/2017-04-07_14-30-31.png" width="640"/>
     
-    >**Talking Point**: When it comes time to deploy our app, we us Release Management inside of VSTS.  Here we get to define our environments, and also how we want to deploy our apps into the environment.  I use a pre-built HockeyApp task to deploy my app to my beta testers using HockeyApp.  
+    >**Talking Point**: When it comes time to deploy our app, we us Release Management inside of VSTS.  Here we get to define our environments, and also how we want to deploy our apps into the environment.  I use a HockeyApp task to deploy my app to my beta testers using HockeyApp.  
 
 22. Click on Store environment
 
@@ -321,7 +320,7 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
 
     <img src="media/2017-04-07_15-22-38.png" width="640"/>
 
-    >**Talking Point**: The first thing we need to do is tell Mobile Center where our code is sitting.  As you can see, we can pull your code in from VSTS, GitHub or Bitbucket.  For this demo, my code is actually sitting in GitHub
+    >**Talking Point**: The first thing I want to do is set up a build.  To do that, we need to tell Mobile Center where our code is sitting.  We can pull code in from VSTS, GitHub or Bitbucket.  For this demo, my code is actually sitting in GitHub
 
 35. Click on GitHub
 
@@ -380,3 +379,126 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
     <img src="media/2017-04-09_18-54-07.jpg" width="640"/>
 
     >**Talking Point**: It takes a while for the build to actually complete and for the tests to fire off so we'll take a look at a run that I've already done
+
+45. Click on the build beacon
+
+    <img src="media/2017-04-09_18-54-07.jpg" width="640"/>
+
+    >**Talking Point**: This is the BikeShare360 mobile project.  As you can see we have a bunch of branches and we have builds for two branches.  One is a feature branch, and one is the master branch.  As you can see, the feature branch has a broken build.
+
+46. Click on the broken build, then click on the broken build again, scroll through the build output
+
+    <img src="media/2017-04-10_9-27-44.png" width="640"/>
+
+    <img src="media/2017-04-10_9-31-08.png" width="640"/>
+
+    >**Talking Point**: We can drill into the individual builds and see exactly what happened.  You can also dowload all the log files
+
+47. Browse back to the successful build on the master branch, click build and click the download button
+
+    <img src="media/2017-04-10_9-35-01.png" width="640"/>
+
+    <img src="media/2017-04-10_9-35-13.png" width="640"/>
+
+    >**Talking Point**: For successful builds, not only can you see all the build outputs and download all the build logs, you can also download all the build artifacts
+
+48. Click on the test beacon
+
+    <img src="media/2017-04-10_9-39-57.png" width="640"/>
+
+    >**Talking Point**: In the test beacon, we can see all the automated ui test runs that we did.  We can also see the number of tests run and the peak memory usage.  Let's take a look at one of our test runs and let's pick one with errors, those are much more fun to look at
+
+49. Click on a test run with errors
+
+    <img src="media/2017-04-10_9-44-08.png" width="640"/>
+
+    >**Talking Point**: Here we can see the tests that were run, which one passed, which one failed.  How many devices were tested against.  Let's go look at our failed test
+
+50. Click on the failed Sign Up test, slowly click through all the test steps until you get to the broken steps
+
+    <img src="media/2017-04-10_9-49-00.png" width="640"/>
+
+    >**Talking Point**: When we look at an individual test, we can see all the devices we are testing against.  We can also see exactly what happened during each test step
+
+51. Click on the broken device
+
+    <img src="media/2017-04-10_10-46-15.png" width="640"/>
+
+    >**Talking Point**: We can drill into the devices that broke and we can get detailed information on why it broke.
+
+52. Click on Details
+
+    <img src="media/2017-04-10_10-47-16.png" width="640"/>
+
+    >**Talking Point**: We can get exactly what device is breaking.
+
+53. Click on Logs, then Test Logs and Test Failures
+
+    <img src="media/2017-04-10_10-48-39.png" width="640"/>
+
+    >**Talking Point**: We can also get exactly why the device is breaking.  We can get detailed device logs, test logs and also the test failures
+
+54. Click on the Distribute beacon
+
+    <img src="media/2017-04-10_12-13-57.png" width="640"/>
+
+    >**Talking Point**: So we have our automated builds, and we can run our automated UI tests against our app on over 2000 real devices.  Now we can distribute our app to our different distribution groups.  Creating groups is easy, just click on New Group
+
+55. Click on New Group button
+
+    <img src="media/2017-04-10_12-13-57.png" width="640"/>
+
+    >**Talking Point**: And fill in your group name and the people you want in the group
+
+56. Click on Distribute Beacon and select Releases, then go ahead and select any release to show the release details
+
+    <img src="media/2017-04-10_12-17-16.png" width="640"/>
+
+    <img src="media/2017-04-10_12-17-37.png" width="640"/>
+
+    >**Talking Point**: You can also see all the different releases you have released to your different groups
+
+57. Click on the Crash Beacon
+
+    <img src="media/2017-04-10_12-20-13.png" width="640"/>
+
+    >**Talking Point**: And after we distribute our app to our different groups, we can also get Analytics and crash reports.  From the crash beacon, we can see the number of crashes.  We can also drill into individual crashes to see exactly what happened during the crash
+
+58. Click on a crash
+
+    <img src="media/2017-04-10_12-22-21.png" width="640"/>
+
+    >**Talking Point**: We can see the devices that crashed, the number of crashes per day, the most affected device, the most affected OS and also the stack trace of when the crash occured!  Super important if you are a dev!.
+
+59. Click on the Analytics beacon
+
+    <img src="media/2017-04-10_12-24-47.png" width="640"/>
+
+    >**Talking Point**: Now crash reports are super important, but we also want to know just what are people doing with our apps.  So in the Analytics beacon, we get to see exactly what users are doing.  We get to see the number of active users.  The numer of daily users.  The number of sessions.  The top devices.  What countries are using your app and the number of active devices.
+
+60. Click on Analytics and select Events
+
+    <img src="media/2017-04-10_12-27-15.png" width="640"/>
+
+    >**Talking Point**: Selecting the Events, we can now see exactly what users are actually doing in our app.  This does require instrumenting your code, but it's like one extra line that you add.  
+
+61. Click on Analytics and select Live flow
+
+    <img src="media/2017-04-10_12-27-47.png" width="640"/>
+
+    >**Talking Point**: And if I actually had users using my app, Live Flow let's me see in real time what's happening!
+
+62. Go back to slide deck
+
+    <img src="media/2017-04-10_12-28-42.png" width="640"/>
+
+    >**Talking Point**: So there you go!  Visual Studio Mobile Center.  With just a couple of clicks, you get full end to end DevOps coverage for your mobile apps written in ANY LANGUAGE.  Continuous Integration, Continuous Testing, Continuous Delivery and Continuous Learning.  All in one consolidated place with easy to use dashboards
+
+63. Next slide  
+
+    <img src="media/2017-04-10_12-36-18.png" width="640"/>
+
+    >**Talking Point**: Visual Studio Mobile Center is currently in preview right now, but it's totally available for you to try.  Just the build system alone is worth its weight in gold! To try out mobile center, go to the first link.  If you need documentation or want a set of videos that walk you through Mobile Center, we have those as well. So all you dev's out there, go try out Visual Studio Mobile Center Today!  Thank you very much.
+
+
+
