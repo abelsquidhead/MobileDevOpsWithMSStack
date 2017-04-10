@@ -290,7 +290,7 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
 
     <img src="media/2017-04-07_14-51-52.png" width="640"/>
 
-    >**Talking Point**: Visual Studio Mobile Center is a mobile centric lens that sits on top of Visual Studio Team Systems.  With Visual Studio Mobile Center, we give you the ability to create your full DevOps pipeline in just a few simple clicks, and everything you need for your mobile app is in one easy to access place with some beautiful consolidated dashboards.  Let's go check out Mobile Center!
+    >**Talking Point**: Visual Studio Mobile Center is a mobile centric lens that sits on top of Visual Studio Team Services.  With Visual Studio Mobile Center, we give you the ability to create your full DevOps pipeline in just a few simple clicks, and everything you need for your mobile app is in one easy to access place with some beautiful consolidated dashboards.  Let's go check out Mobile Center!
 
 30. Go back to your browser, tab 7
 
