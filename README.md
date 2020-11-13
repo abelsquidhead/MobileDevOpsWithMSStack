@@ -184,13 +184,13 @@ Finally, you will need to clone the acquaint mobile xamarin app into your GitHub
     https://testcloud.xamarin.com/app/7d43c6a5-2965-4136-8a74-c76c86d5d0ac/
 
     Tab 5: Release definition for Bike Rider app  
-    https://cadddemos.visualstudio.com/BikeSharing360/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?definitionId=24&_a=environments-editor
+    https://cadddemos.visualstudio.com/BikeSharing360/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?definitionId=24&_a=environments-editor&WT.mc_id=dotnet-0000-abewan
 
     Tab 6: Hockey App  
     https://rink.hockeyapp.net/manage/apps/290323
 
     Tab 7: Mobile Center  
-    https://mobile.azure.com/apps
+    https://mobile.azure.com/apps?WT.mc_id=dotnet-0000-abewan
 
     <img src="media/2017-04-07_13-58-42.png" width="640"/>
 
